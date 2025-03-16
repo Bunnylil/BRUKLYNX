@@ -1,190 +1,188 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .container {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 .left {
-    flex: 1;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    background-color: #f8f8f8;
-    justify-content: center; 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+  justify-content: center;
 }
 
-
 .left img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 5px;
+  max-width: 80%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px; 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
 }
 
 .form-container {
-    width: 100%; 
-    max-width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .form-container p a {
-    color: orange;
-    text-decoration: none;
-    font-weight: bold;
+  color: orange;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 120px; 
-    color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 120px;
+  color: #333;
 }
-.logo-container { 
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    margin-bottom: 20px; 
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.form-content{
-    border: 1px solid #ddd;
-    padding: 30px;
-    border-radius: 8px;
+.form-content {
+  border: 1px solid #ddd;
+  padding: 30px;
+  border-radius: 8px;
 }
 
 .form-container h2 {
-    margin-bottom: 15px;
-    color: #333; 
+  margin-bottom: 15px;
+  color: #333;
 }
 
 .form-container p {
-    margin-bottom: 20px;
-    color: #666; 
+  margin-bottom: 20px;
+  color: #666;
 }
 
 .form-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .form-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    font-weight: bold; 
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .form-container button:hover {
-    opacity: 0.8;
-    background-color: orange; 
+  opacity: 0.8;
+  background-color: orange;
 }
 /* Add this to your existing CSS file */
 .password-container {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 #passwordInput {
-    width: 100%;
-    padding-right: 40px; /* Space for the eye icon */
+  width: 100%;
+  padding-right: 40px;
 }
 
 #togglePassword {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #888;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
 }
 
 #togglePassword:hover {
-    color: #333;
+  color: #333;
 }
 
 .terms {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    margin-bottom: 20px; 
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
 .terms label {
-    margin-left: 5px; 
-    color: #666;
-    cursor: pointer;
-} 
+  margin-left: 5px;
+  color: #666;
+  cursor: pointer;
+}
 
 .terms input[type="checkbox"] {
-    appearance: none; 
-    width: 18px;
-    height: 18px;
-    border: 1px solid orange;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-right: 5px;
-
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid orange;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 5px;
 }
 
 .terms input[type="checkbox"]:checked {
-    background-color: black;
-    border-color: black;
-    position: relative; 
+  background-color: black;
+  border-color: black;
+  position: relative;
 }
 
-.terms input[type="checkbox"]:checked::before { 
-    content: '\2713';
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 12px;
+.terms input[type="checkbox"]:checked::before {
+  content: "\2713";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
 }
 .google-signup {
-    margin-top: 15px; 
-    text-align: center; 
+  margin-top: 15px;
+  text-align: center;
 }
 
 .google-button {
-    background-color: #fff; 
-    color: #333; 
-    border: 1px solid #ccc; 
-    padding: 10px 15px; 
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    transition: background-color 0.3s ease; 
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
 .google-button i {
-    margin-right: 8px; 
-    color: palegreen; 
+  margin-right: 8px;
+  color: palegreen;
 }
 
 .google-button:hover {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }

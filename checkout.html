@@ -3,17 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Drinks Emporium</title>
-    <link rel="stylesheet" href="cart.css" />
+    <title>3legant</title>
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="checkout.css" />
   </head>
   <body>
     <div class="top-bar">
@@ -23,6 +18,7 @@
         <a href="signup.html" class="shop-link">Sign up →</a>
       </div>
     </div>
+
     <header class="navbar">
       <div class="logo">
         <a href="index.html" aria-label="Go to home page">
@@ -39,7 +35,7 @@
         </ul>
       </nav>
       <div class="nav-icons">
-        <a href="signup.html" aria-label="user">
+        <a href="signup.html" aria-label="User">
           <i class="fas fa-user"></i>
         </a>
         <a href="#" aria-label="Favorites">
@@ -61,83 +57,86 @@
       </div>
     </header>
 
-    <div class="cart-container">
-      <h1 class="cart-text">Cart</h1>
-      <p class="progress-text">Shop for $200 more to enjoy FREE Shipping</p>
+    <div class="checkout-cart-container">
+      <h2 class="checkout-cart-title">Checkout</h2>
     </div>
-
-    <div id="progress-container">
-      <div id="progress-bar">
-        <span id="progress-amount"></span>
-      </div>
-    </div>
-
-    <div class="cart-container">
-      <h1 class="cart-text">Cart</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Subtotal</th>
-          </tr>
-        </thead>
-        <tbody id="cart-items">
-          <!-- Cart items will be dynamically inserted here -->
-        </tbody>
-      </table>
-    </div>
-
     <div class="container">
-      <div class="coupon-section">
-        <h2>Have a coupon?</h2>
-        <p>Add your code for an instant cart discount.</p>
-        <div class="input-group">
-          <input
-            type="text"
-            id="coupon-input"
-            placeholder="Input coupon code"
-          />
-          <button onclick="applyCoupon()">Apply</button>
-        </div>
-      </div>
-      <div class="cart-summary">
-        <h2>Cart summary</h2>
-        <div class="shipping-options">
-          <label>
-            <input
-              type="radio"
-              name="shipping"
-              value="free"
-              checked
-              onchange="updateCartSummary()"
-            />
-            Free shipping <span class="price">$0.00</span>
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="shipping"
-              value="express"
-              onchange="updateCartSummary()"
-            />
-            Express shipping <span class="price">$15.00</span>
-          </label>
-        </div>
-        <div class="totals">
-          <p>Subtotal: <span class="price" id="subtotal">$0.00</span></p>
-          <p>Total: <span class="price" id="total">$0.00</span></p>
-        </div>
-        <button
-          class="checkout-btn"
-          onclick="window.location.href='checkout.html'"
-        >
-          Checkout
-        </button>
-      </div>
-    </div>
+      <h2>Billing Info</h2>
+      <p class="subtext">
+        Choose a payment option below and fill out the appropriate information
+      </p>
 
+      <div class="payment-options">
+        <button class="active">
+          <i class="fa-regular fa-credit-card"></i> Credit Card
+        </button>
+        <button><i class="fa-solid fa-gift"></i> Gift Card</button>
+        <button><i class="fa-brands fa-paypal"></i> PayPal</button>
+      </div>
+
+      <form>
+        <div class="form-section">
+          <div class="billing-address">
+            <h3><i class="fa-solid fa-location-dot"></i> Billing Address</h3>
+            <label>Full Name</label>
+            <input type="text" required />
+
+            <label>Address 1</label>
+            <input type="text" required />
+
+            <label>Address 2</label>
+            <input type="text" />
+
+            <label>City</label>
+            <input type="text" required />
+
+            <label>State</label>
+            <select required>
+              <option value="">Select State</option>
+              <option value="NY">New York</option>
+              <option value="CA">California</option>
+            </select>
+
+            <label>Zip Code</label>
+            <input type="text" required />
+          </div>
+
+          <div class="credit-card-info">
+            <h3><i class="fa-solid fa-credit-card"></i> Credit Card Info</h3>
+            <label>Name on Card</label>
+            <input type="text" required />
+
+            <label>Card Number</label>
+            <div class="input-icon">
+              <input type="text" placeholder="0000-0000-0000-0000" required />
+              <i class="fa-regular fa-credit-card"></i>
+            </div>
+
+            <label>CVV Number</label>
+            <input type="text" placeholder="CVV" required />
+
+            <label>Expiration Date</label>
+            <div class="expiry-fields">
+              <select required>
+                <option value="">Month</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+              </select>
+              <select required>
+                <option value="">Year</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="continue-btn">Continue</button>
+        <button type="button" class="back-btn">
+          <i class="fa-solid fa-arrow-left"></i> Cart
+        </button>
+      </form>
+    </div>
     <footer class="footer">
       <div class="footer-section">
         <h1>NEED HELP?</h1>
@@ -146,12 +145,12 @@
         <a href="#">Contact us</a>
       </div>
       <div class="footer-section">
-        <h1>ABOUT DRINKS</h1>
+        <h1>ABOUT 3LEGENT</h1>
         <a href="#">About us</a>
         <a href="#">Returns and Refund Policy</a>
         <a href="#">Terms and Conditions</a>
         <a href="#">Privacy notice</a>
-        <a href="#">Drinks Global</a>
+        <a href="#">3legent Global</a>
       </div>
       <div class="footer-section">
         <h1>USEFUL LINKS</h1>
@@ -161,7 +160,7 @@
         <a href="#">Shipping and Delivery</a>
       </div>
       <div class="footer-section">
-        <h1>SNEAK INTERNATIONALS</h1>
+        <h1>3LEGENT INTERNATIONALS</h1>
         <a href="#">Kenya</a>
         <a href="#">Uganda</a>
         <a href="#">Algeria</a>
@@ -197,10 +196,10 @@
         </div>
       </section>
       <div class="footer-bottom">
-        <p>Copyright &copy; 2025 Drinks. All rights reserved.</p>
+        <p>Copyright &copy; 2025 3legent. All rights reserved.</p>
       </div>
     </footer>
 
-    <script src="cart.js"></script>
+    <script src="checkout.js" defer></script>
   </body>
 </html>

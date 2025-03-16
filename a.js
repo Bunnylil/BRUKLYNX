@@ -202,8 +202,8 @@ let selectedProduct = {
     image: document.getElementById('main-image').src,
     title: document.querySelector('.product-title').innerText,
     price: document.querySelector('.price').innerText.replace('$', ''),
-    color: document.querySelector('.color-circle[data-color="color1"]').getAttribute('data-drink-type'), // Default selection
-    drinkType: document.querySelector('.color-circle[data-color="color1"]').getAttribute('data-drink-type') // Default selection
+    color: document.querySelector('.color-circle[data-color="color1"]').getAttribute('data-drink-type'), 
+    drinkType: document.querySelector('.color-circle[data-color="color1"]').getAttribute('data-drink-type') 
 };
 
 // Function to update the selected product details

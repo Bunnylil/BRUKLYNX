@@ -1,63 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3legant</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="signup.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="signup.css" />
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
     <script src="signup.js" defer type="module"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- Left Section (Logo and Image Slider) -->
-        <div class="left">
-            <div class="logo-container">
-                <div class="logo">3legant.</div>
-                <!-- Image Slider -->
-                <img id="dynamicImage" src="images/a (1).png" alt="Elegant Chair">
-            </div>
+      <!-- Left Section (Logo and Image Slider) -->
+      <div class="left">
+        <div class="logo-container">
+          <div class="logo">3legant.</div>
+          <!-- Image Slider -->
+          <img id="dynamicImage" src="images/a (1).png" alt="Elegant Chair" />
         </div>
+      </div>
 
-        <!-- Right Section (Signup Form) -->
-        <div class="right">
-            <div class="form-container">
-                <h2>Sign up</h2>
-                <p>Already have an account? <a href="signin.html">Sign in</a></p>
+      <!-- Right Section (Signup Form) -->
+      <div class="right">
+        <div class="form-container">
+          <h2>Sign up</h2>
+          <p>Already have an account? <a href="signin.html">Sign in</a></p>
 
-                <!-- Name Input -->
-                <input type="text" id="nameInput" placeholder="Your name" required>
+          <!-- Name Input -->
+          <input type="text" id="nameInput" placeholder="Your name" required />
 
-                <!-- Username Input -->
-                <input type="text" id="usernameInput" placeholder="Username" required>
+          <!-- Username Input -->
+          <input
+            type="text"
+            id="usernameInput"
+            placeholder="Username"
+            required
+          />
 
-                <!-- Email Input -->
-                <input type="email" id="emailInput" placeholder="Email address" required>
+          <!-- Email Input -->
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="Email address"
+            required
+          />
 
-                <!-- Password Input with Toggle -->
-                <div class="password-container">
-                    <input type="password" id="passwordInput" placeholder="Password" required>
-                    <i class="fas fa-eye" id="togglePassword"></i>
-                </div>
+          <!-- Password Input with Toggle -->
+          <div class="password-container">
+            <input
+              type="password"
+              id="passwordInput"
+              placeholder="Password"
+              required
+            />
+            <i class="fas fa-eye" id="togglePassword"></i>
+          </div>
 
-                <!-- Terms and Conditions Checkbox -->
-                <div class="terms">
-                    <input type="checkbox" id="termsCheckbox" required>
-                    <label for="termsCheckbox">I agree with <strong>Privacy Policy</strong> and <strong>Terms of Use</strong></label>
-                </div>
+          <!-- Terms and Conditions Checkbox -->
+          <div class="terms">
+            <input type="checkbox" id="termsCheckbox" required />
+            <label for="termsCheckbox"
+              >I agree with <strong>Privacy Policy</strong> and
+              <strong>Terms of Use</strong></label
+            >
+          </div>
 
-                <!-- Sign Up Button -->
-                <button id="signupButton">Sign Up</button>
+          <!-- Sign Up Button -->
+          <button id="signupButton">Sign Up</button>
 
-                <!-- Google Sign Up Button -->
-                <div class="google-signup">
-                    <button class="google-button" id="googleButton">
-                        <i class="fab fa-google"></i> Sign up with Google
-                    </button>
-                </div>
-            </div>
+          <!-- Google Sign Up Button -->
+          <div class="google-signup">
+            <button class="google-button" id="googleButton">
+              <i class="fab fa-google"></i> Sign up with Google
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

@@ -51,7 +51,7 @@ function fetchAndUpdateImage() {
     })
     .then((imageData) => {
       const imgElement = document.getElementById("DrinksImage");
-      imgElement.src = imageData; // Set the image source
+      imgElement.src = imageData;
     })
     .catch((error) => {
       console.error("Error fetching image:", error);
@@ -106,8 +106,8 @@ function startProductOfferTimer() {
       secondsElement.textContent = String(seconds).padStart(2, "0");
     };
 
-    updateTimer(); // Initial call
-    const timerInterval = setInterval(updateTimer, 1000); // Update every second
+    updateTimer();
+    const timerInterval = setInterval(updateTimer, 1000);
   }
 }
 
@@ -126,58 +126,58 @@ function setupHamburgerMenu() {
   }
 }
 
-document.getElementById('signupButton').addEventListener('click', async function (event) {
-  event.preventDefault(); // Prevent the default link behavior
+document
+  .getElementById("signupButton")
+  .addEventListener("click", async function (event) {
+    event.preventDefault();
 
-  const emailInput = document.getElementById('emailInput');
-  const errorMessage = document.getElementById('errorMessage');
-  const successMessage = document.getElementById('message');
+    const emailInput = document.getElementById("emailInput");
+    const errorMessage = document.getElementById("errorMessage");
+    const successMessage = document.getElementById("message");
 
-  const email = emailInput.value.trim();
+    const email = emailInput.value.trim();
 
-  
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(email)) {
-      errorMessage.textContent = 'Please enter a valid email address.';
-      errorMessage.style.display = 'block';
-      successMessage.style.display = 'none';
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      errorMessage.textContent = "Please enter a valid email address.";
+      errorMessage.style.display = "block";
+      successMessage.style.display = "none";
       return;
-  }
+    }
 
-  try {
-      
-      const response = await fetch('http://localhost:3000/subscribe', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email }),
+    try {
+      const response = await fetch("http://localhost:3000/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-          successMessage.textContent = data.message;
-          successMessage.style.display = 'block';
-          errorMessage.style.display = 'none';
+        successMessage.textContent = data.message;
+        successMessage.style.display = "block";
+        errorMessage.style.display = "none";
       } else {
-          errorMessage.textContent = data.message;
-          errorMessage.style.display = 'block';
-          successMessage.style.display = 'none';
+        errorMessage.textContent = data.message;
+        errorMessage.style.display = "block";
+        successMessage.style.display = "none";
       }
-  } catch (error) {
-      console.error('Error:', error);
-      errorMessage.textContent = 'An error occurred. Please try again later.';
-      errorMessage.style.display = 'block';
-      successMessage.style.display = 'none';
-  }
-});
+    } catch (error) {
+      console.error("Error:", error);
+      errorMessage.textContent = "An error occurred. Please try again later.";
+      errorMessage.style.display = "block";
+      successMessage.style.display = "none";
+    }
+  });
 
 // Initialize all functionalities when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   fetchAndDisplayProducts();
   fetchAndUpdateImage();
-  setInterval(fetchAndUpdateImage, 5000); // Update image every 5 seconds
+  setInterval(fetchAndUpdateImage, 5000);
   startProductOfferTimer();
   setupHamburgerMenu();
   setupEmailSignup();
